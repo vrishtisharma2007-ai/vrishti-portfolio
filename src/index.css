@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@theme {
+  --font-headline: "Public Sans", sans-serif;
+  --font-body: "Public Sans", sans-serif;
+  --font-label: "Inter", sans-serif;
+
+  --color-primary: #5056ab;
+  --color-secondary: #a02d91;
+  --color-tertiary: #8b5000;
+  --color-background: #f4fbfa;
+  --color-on-surface: #00201f;
+  --color-on-surface-variant: #464651;
+  --color-primary-container: #e0e0ff;
+  --color-on-primary-container: #040666;
+  --color-surface-container-high: #e0f2f1;
+  --color-surface-container-low: #f0fdfc;
+  --color-surface-container-highest: #d7eae8;
+  --color-surface-container-lowest: #ffffff;
+  --color-outline-variant: #c7c5d3;
+  --color-outline: #767680;
+  --color-on-primary: #ffffff;
+  --color-tertiary-container: #ffdcc6;
+  --color-secondary-container: #ffd7f1;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-on-surface font-body;
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 32, 31, 0.1);
+}
