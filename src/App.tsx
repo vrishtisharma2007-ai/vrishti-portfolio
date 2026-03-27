@@ -144,7 +144,7 @@ export default function App() {
             >
               <div className="relative w-full aspect-square rounded-3xl overflow-hidden glass-card p-4">
                 <img 
-                  src="https://picsum.photos/seed/vrishti/800/800" 
+                  src={vrishti} 
                   alt="Vrishti Sharma" 
                   className="w-full h-full object-cover rounded-2xl"
                   referrerPolicy="no-referrer"
