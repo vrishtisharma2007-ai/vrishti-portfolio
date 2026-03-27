@@ -41,7 +41,6 @@ export default function App() {
       result: "Successfully demonstrated robust lane tracking and proximity alerts in varying lighting environments.",
       tags: ["Python", "OpenCV", "Computer Vision"],
       image: "/project1.png",
-      fallbackImage: "https://images.unsplash.com/photo-1555673223-93666d691e84?auto=format&fit=crop&q=80&w=1200",
       reverse: false
     },
     {
@@ -54,7 +53,6 @@ export default function App() {
       result: "The system identifies closed eyes for a sustained period and triggers an immediate audio alert to wake the driver.",
       tags: ["Python", "OpenCV", "Dlib"],
       image: "/project2.png",
-      fallbackImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1200",
       reverse: true
     },
     {
@@ -67,7 +65,6 @@ export default function App() {
       result: "A modern, user-friendly redesign that prioritizes imagery and ease of conversion.",
       tags: ["Figma", "UI Design", "Prototyping"],
       image: "/project3.jpeg",
-      fallbackImage: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200",
       reverse: false
     }
   ];
@@ -145,9 +142,6 @@ export default function App() {
                   alt="Vrishti Sharma" 
                   className="w-full h-full object-cover rounded-2xl"
                   referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800";
-                  }}
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl flex items-center gap-4 border border-outline-variant">
@@ -188,9 +182,6 @@ export default function App() {
                         alt={project.title} 
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).src = (project as any).fallbackImage;
-                        }}
                       />
                     </div>
                   </div>
@@ -233,9 +224,6 @@ export default function App() {
                   alt="Vrishti Sharma portrait" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800";
-                  }}
                 />
               </div>
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
