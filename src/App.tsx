@@ -5,6 +5,11 @@
 
 // Last updated: 2026-03-27 11:52:00 UTC
 import { motion } from "motion/react";
+import project1 from "./assets/project1.png";
+import project2 from "./assets/project2.png";
+import project3 from "./assets/project3.jpeg";
+import vrishti from "./assets/vrishti.jpg";
+import vrishti2 from "./assets/vrishti2.jpeg";
 import { 
   ArrowRight, 
   Sparkles, 
@@ -41,7 +46,7 @@ export default function App() {
       approach: "Developed a system using OpenCV to process live video feeds, detecting lane boundaries and estimating distance to obstacles.",
       result: "Successfully demonstrated robust lane tracking and proximity alerts in varying lighting environments.",
       tags: ["Python", "OpenCV", "Computer Vision"],
-      image: "/project1.png",
+      image: project1,
       reverse: false
     },
     {
@@ -53,7 +58,7 @@ export default function App() {
       approach: "Leveraged facial landmark detection and eye-tracking algorithms to monitor Eye Aspect Ratio (EAR) in real-time.",
       result: "The system identifies closed eyes for a sustained period and triggers an immediate audio alert to wake the driver.",
       tags: ["Python", "OpenCV", "Dlib"],
-      image: "/project2.png",
+      image: project2,
       reverse: true
     },
     {
@@ -65,7 +70,7 @@ export default function App() {
       approach: "Created high-fidelity wireframes focusing on visual hierarchy, accessibility, and streamlined search flows.",
       result: "A modern, user-friendly redesign that prioritizes imagery and ease of conversion.",
       tags: ["Figma", "UI Design", "Prototyping"],
-      image: "/project3.jpeg",
+      image: project3,
       reverse: false
     }
   ];
@@ -139,7 +144,7 @@ export default function App() {
             >
               <div className="relative w-full aspect-square rounded-3xl overflow-hidden glass-card p-4">
                 <img 
-                  src="/vrishti.jpg" 
+                  src={vrishti} 
                   alt="Vrishti Sharma" 
                   className="w-full h-full object-cover rounded-2xl"
                   referrerPolicy="no-referrer"
@@ -221,7 +226,7 @@ export default function App() {
             >
               <div className="w-full aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src="/vrishti2.jpeg" 
+                  src={vrishti2} 
                   alt="Vrishti Sharma portrait" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
