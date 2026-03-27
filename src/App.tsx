@@ -5,11 +5,11 @@
 
 // Last updated: 2026-03-27 17:33:00 UTC
 import { motion } from "motion/react";
-const project1 = "project1.png";
-const project2 = "project2.png";
-const project3 = "project3.jpeg";
-const vrishti = "vrishti.jpg";
-const vrishti2 = "vrishti2.jpeg";
+const project1 = "/images/project1.png";
+const project2 = "/images/project2.png";
+const project3 = "/images/project3.jpeg";
+const vrishti = "/images/vrishti.jpg";
+const vrishti2 = "/images/vrishti2.jpeg";
 import { 
   ArrowRight, 
   Sparkles, 
@@ -146,7 +146,11 @@ export default function App() {
                 <img 
                   src={vrishti} 
                   alt="Vrishti Sharma" 
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-cover rounded-2xl border-2 border-primary/20"
+                  onError={(e) => {
+                    console.error("Failed to load vrishti.jpg");
+                    e.currentTarget.src = "https://picsum.photos/seed/vrishti/400/400";
+                  }}
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl flex items-center gap-4 border border-outline-variant">
@@ -185,7 +189,11 @@ export default function App() {
                       <img 
                         src={project.image} 
                         alt={project.title} 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover border border-outline-variant/30"
+                        onError={(e) => {
+                          console.error(`Failed to load project image: ${project.image}`);
+                          e.currentTarget.src = `https://picsum.photos/seed/${project.title}/800/450`;
+                        }}
                       />
                     </div>
                   </div>
@@ -226,7 +234,11 @@ export default function App() {
                 <img 
                   src={vrishti2} 
                   alt="Vrishti Sharma portrait" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover border-4 border-white"
+                  onError={(e) => {
+                    console.error("Failed to load vrishti2.jpeg");
+                    e.currentTarget.src = "https://picsum.photos/seed/vrishti2/600/600";
+                  }}
                 />
               </div>
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
