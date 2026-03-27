@@ -40,7 +40,8 @@ export default function App() {
       approach: "Developed a system using OpenCV to process live video feeds, detecting lane boundaries and estimating distance to obstacles.",
       result: "Successfully demonstrated robust lane tracking and proximity alerts in varying lighting environments.",
       tags: ["Python", "OpenCV", "Computer Vision"],
-      image: "https://lh3.googleusercontent.com/aida/ADBb0uiDHNI1LL-k4DmoojUfKheSFIVXExNerX8AjV5-FngArFkTR5IzG4-EX8Y7tAVZG5m4qw5mf22keh_KGNLH6eqWeiUDcguJ_vXBiqkAbTEfymabeF2Ef4A-PhOGmdP3k6g4CI_4t90fNv37Chnyo1ZtuH05iLUcJvgaVmyy1dfCuJw_a-L3qxhHRhPvNhuuxHVpTxIxSGjkWVDt67iSUO0fGwmUFzlJH1UoHxnz5tx1bGj374U2zWQCLi2AQSeNRHaQ6TzQNW2DLQ",
+      image: "/project1.png",
+      fallbackImage: "https://images.unsplash.com/photo-1555673223-93666d691e84?auto=format&fit=crop&q=80&w=1200",
       reverse: false
     },
     {
@@ -52,7 +53,8 @@ export default function App() {
       approach: "Leveraged facial landmark detection and eye-tracking algorithms to monitor Eye Aspect Ratio (EAR) in real-time.",
       result: "The system identifies closed eyes for a sustained period and triggers an immediate audio alert to wake the driver.",
       tags: ["Python", "OpenCV", "Dlib"],
-      image: "https://lh3.googleusercontent.com/aida/ADBb0ui8965abKv_EbL0U0Qmd8RT7r3OlWV_aqHv7HKrd79upvc2P5cYt10rKKiIZRAvyzSCGTQaz99vzU_xc_op18NPOnrk2houEJw9Mx93jpuCpE9oM980duPY0jPT3novN3IyztepyFi9ArPXCc1osNiTJiWCCBKpNIhciuucBqdbJTpj-DEr6FfD6BaLfc9iVEk9P29wVv6Ah1EuawOtsZQbiZBplDgRlyyYfozZLVKwTHvqhqSRIcqSTzowqSbRshYQV-LPzH9KpA",
+      image: "/project2.png",
+      fallbackImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1200",
       reverse: true
     },
     {
@@ -64,7 +66,8 @@ export default function App() {
       approach: "Created high-fidelity wireframes focusing on visual hierarchy, accessibility, and streamlined search flows.",
       result: "A modern, user-friendly redesign that prioritizes imagery and ease of conversion.",
       tags: ["Figma", "UI Design", "Prototyping"],
-      image: "https://lh3.googleusercontent.com/aida/ADBb0ujHjKf1hNCOypQnvSUtk8-x27DInOiSGoxM1pF7q7IEigo1-xIZOvYQwJRfuumTml7IZ6C7Xvp5U3xSy9id2mIR9hxiCGtgA9Q2Fn6nFktU-kKLXCG7n1p6MV2VrcWnm6XQJHS4v9AKIRDE7Ufchlh_nvDXyj_bXFY7y7X2skfiYAktmgio0f7-K0DD6xjpMmfA4gbt68PgtF36xDrHojxX6je1RIXG3cV0oqBpfVObKbcbKNskigw93fbsLYO6blJepuhqGDTY4Q",
+      image: "/project3.jpeg",
+      fallbackImage: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200",
       reverse: false
     }
   ];
@@ -138,10 +141,13 @@ export default function App() {
             >
               <div className="relative w-full aspect-square rounded-3xl overflow-hidden glass-card p-4">
                 <img 
-                  src="https://lh3.googleusercontent.com/aida/ADBb0uhCutRgZigBStnTfapRl5UyeU5E1tZ2cNwyqajBTgr-xfeW6pGsR1oa0fZB3xS36WX7YhVgf9yPx4-q6-HURhpPN3oX74WQoe2I7Ntuz1srURmlPAGQnBMLTfkZOkLQ-jPdwqBvK1yztwTc_UHjKiH_-eHzT658Ytv482RBVp_Q6_6b01LJ6sO-i0hgnh-Pawg7k2RdNimbNTLRkiGhzgIkwz_ts61tu81mS3-OXrXzz_OAqLCBXDl87DzstTILWg0xliqJ2S3iRQ" 
+                  src="/vrishti.jpg" 
                   alt="Vrishti Sharma" 
                   className="w-full h-full object-cover rounded-2xl"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800";
+                  }}
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl flex items-center gap-4 border border-outline-variant">
@@ -182,6 +188,9 @@ export default function App() {
                         alt={project.title} 
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = (project as any).fallbackImage;
+                        }}
                       />
                     </div>
                   </div>
@@ -220,10 +229,13 @@ export default function App() {
             >
               <div className="w-full aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src="https://lh3.googleusercontent.com/aida/ADBb0uiWe4pluFJF6aAUFkp8JhOYVtdMuTuWYnVhNro-eYup1a4JUNZgkMKqT4EUN7uGBCzHPVjBS1eFkWEDUD_DsF_IIQR8XvSIaOsYvfqCtxcAALiTo_9va20JtS-uw6p1cjymgyVTHDQuAaW3Jdp-gkLWigg53AKDU4ShI5Wg3o53pXsitQIcpvTu0ucKJgOIEKrxQD9NI2eNSSnpM-NrDh8h7rXK0hQLGlI88YuNFdmynovkf53Qnv1CLXopqqP3s3rsJf_S1bobgw" 
+                  src="/vrishti2.jpeg" 
                   alt="Vrishti Sharma portrait" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800";
+                  }}
                 />
               </div>
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
