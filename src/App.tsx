@@ -3,13 +3,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Last updated: 2026-03-27 16:16:00 UTC
+// Last updated: 2026-03-27 17:33:00 UTC
 import { motion } from "motion/react";
-import project1 from "./assets/project1.png";
-import project2 from "./assets/project2.png";
-import project3 from "./assets/project3.jpeg";
-import vrishti from "./assets/vrishti.jpg";
-import vrishti2 from "./assets/vrishti2.jpeg";
+const project1 = "project1.png";
+const project2 = "project2.png";
+const project3 = "project3.jpeg";
+const vrishti = "vrishti.jpg";
+const vrishti2 = "vrishti2.jpeg";
 import { 
   ArrowRight, 
   Sparkles, 
@@ -147,7 +147,6 @@ export default function App() {
                   src={vrishti} 
                   alt="Vrishti Sharma" 
                   className="w-full h-full object-cover rounded-2xl"
-                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl flex items-center gap-4 border border-outline-variant">
@@ -187,7 +186,6 @@ export default function App() {
                         src={project.image} 
                         alt={project.title} 
                         className="w-full h-full object-cover"
-                        referrerPolicy="no-referrer"
                       />
                     </div>
                   </div>
@@ -229,7 +227,6 @@ export default function App() {
                   src={vrishti2} 
                   alt="Vrishti Sharma portrait" 
                   className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
