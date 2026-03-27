@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+// Last updated: 2026-03-27 11:52:00 UTC
 import { motion } from "motion/react";
 import { 
   ArrowRight, 
