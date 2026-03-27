@@ -1,0 +1,7 @@
+# Mark image files as binary to prevent corruption during Git operations
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
