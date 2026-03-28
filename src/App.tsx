@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Last updated: 2026-03-27 17:33:00 UTC
+// Last updated: 2026-03-28 06:27:00 UTC
 import { motion } from "motion/react";
 const project1 = "/images/project1.png";
 const project2 = "/images/project2.png";
@@ -378,7 +378,23 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-surface-container-lowest w-full py-12 mt-auto border-t border-surface-container-highest font-body text-sm text-on-surface-variant">
         <div className="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
-          <p className="mb-6 md:mb-0">© 2024 AI/ML Specialist. All rights reserved.</p>
+          <div className="space-y-2">
+            <p>© 2024 AI/ML Specialist. All rights reserved.</p>
+            <p className="text-[10px] opacity-50">Build: 2026-03-28 06:27 UTC</p>
+            <button 
+              onClick={() => {
+                console.log("Image Debug Info:");
+                console.log("vrishti:", vrishti);
+                console.log("vrishti2:", vrishti2);
+                console.log("project1:", project1);
+                const imgs = document.querySelectorAll('img');
+                imgs.forEach(img => console.log(`IMG src: ${img.src}, complete: ${img.complete}, naturalWidth: ${img.naturalWidth}`));
+              }}
+              className="text-[10px] underline opacity-30 hover:opacity-100"
+            >
+              Debug Images
+            </button>
+          </div>
           <div className="flex gap-8">
             <a className="text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/in/vrishti-sharma-21st042007">LinkedIn</a>
             <a className="text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/vrishtisharma2007-ai">GitHub</a>
