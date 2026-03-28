@@ -3,13 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Last updated: 2026-03-28 06:40:00 UTC
+// Last updated: 2026-03-28 06:48:00 UTC
 import { motion } from "motion/react";
-import project1 from "./assets/images/Distance_Measurement.png";
-import project2 from "./assets/images/Drowsiness_Detection.png";
-import project3 from "./assets/images/Airbnb_Redesign.jpeg";
-import vrishti from "./assets/images/Vrishti_Sharma.jpg";
-import vrishti2 from "./assets/images/Vrishti_Sharma_Portrait.jpeg";
 import { 
   ArrowRight, 
   Sparkles, 
@@ -46,7 +41,7 @@ export default function App() {
       approach: "Developed a system using OpenCV to process live video feeds, detecting lane boundaries and estimating distance to obstacles.",
       result: "Successfully demonstrated robust lane tracking and proximity alerts in varying lighting environments.",
       tags: ["Python", "OpenCV", "Computer Vision"],
-      image: project1,
+      image: "/images/project1.png",
       reverse: false
     },
     {
@@ -58,7 +53,7 @@ export default function App() {
       approach: "Leveraged facial landmark detection and eye-tracking algorithms to monitor Eye Aspect Ratio (EAR) in real-time.",
       result: "The system identifies closed eyes for a sustained period and triggers an immediate audio alert to wake the driver.",
       tags: ["Python", "OpenCV", "Dlib"],
-      image: project2,
+      image: "/images/project2.png",
       reverse: true
     },
     {
@@ -70,7 +65,7 @@ export default function App() {
       approach: "Created high-fidelity wireframes focusing on visual hierarchy, accessibility, and streamlined search flows.",
       result: "A modern, user-friendly redesign that prioritizes imagery and ease of conversion.",
       tags: ["Figma", "UI Design", "Prototyping"],
-      image: project3,
+      image: "/images/project3.jpeg",
       reverse: false
     }
   ];
@@ -144,7 +139,7 @@ export default function App() {
             >
               <div className="relative w-full aspect-square rounded-3xl overflow-hidden glass-card p-4">
                 <img 
-                  src={vrishti} 
+                  src="/images/vrishti.jpg" 
                   alt="Vrishti Sharma" 
                   className="w-full h-full object-cover rounded-2xl border-2 border-primary/20"
                 />
@@ -224,7 +219,7 @@ export default function App() {
             >
               <div className="w-full aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src={vrishti2} 
+                  src="/images/vrishti2.jpeg" 
                   alt="Vrishti Sharma portrait" 
                   className="w-full h-full object-cover border-4 border-white"
                 />
