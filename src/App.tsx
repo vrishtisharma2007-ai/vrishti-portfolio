@@ -3,13 +3,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// Last updated: 2026-03-28 06:27:00 UTC
+// Last updated: 2026-03-28 06:40:00 UTC
 import { motion } from "motion/react";
-const project1 = "/images/project1.png";
-const project2 = "/images/project2.png";
-const project3 = "/images/project3.jpeg";
-const vrishti = "/images/vrishti.jpg";
-const vrishti2 = "/images/vrishti2.jpeg";
+import project1 from "./assets/images/Distance_Measurement.png";
+import project2 from "./assets/images/Drowsiness_Detection.png";
+import project3 from "./assets/images/Airbnb_Redesign.jpeg";
+import vrishti from "./assets/images/Vrishti_Sharma.jpg";
+import vrishti2 from "./assets/images/Vrishti_Sharma_Portrait.jpeg";
 import { 
   ArrowRight, 
   Sparkles, 
