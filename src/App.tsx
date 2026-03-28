@@ -147,10 +147,6 @@ export default function App() {
                   src={vrishti} 
                   alt="Vrishti Sharma" 
                   className="w-full h-full object-cover rounded-2xl border-2 border-primary/20"
-                  onError={(e) => {
-                    console.error("Failed to load vrishti.jpg");
-                    e.currentTarget.src = "https://picsum.photos/seed/vrishti/400/400";
-                  }}
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl flex items-center gap-4 border border-outline-variant">
@@ -190,10 +186,6 @@ export default function App() {
                         src={project.image} 
                         alt={project.title} 
                         className="w-full h-full object-cover border border-outline-variant/30"
-                        onError={(e) => {
-                          console.error(`Failed to load project image: ${project.image}`);
-                          e.currentTarget.src = `https://picsum.photos/seed/${project.title}/800/450`;
-                        }}
                       />
                     </div>
                   </div>
@@ -235,10 +227,6 @@ export default function App() {
                   src={vrishti2} 
                   alt="Vrishti Sharma portrait" 
                   className="w-full h-full object-cover border-4 border-white"
-                  onError={(e) => {
-                    console.error("Failed to load vrishti2.jpeg");
-                    e.currentTarget.src = "https://picsum.photos/seed/vrishti2/600/600";
-                  }}
                 />
               </div>
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
@@ -380,20 +368,6 @@ export default function App() {
         <div className="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
           <div className="space-y-2">
             <p>© 2024 AI/ML Specialist. All rights reserved.</p>
-            <p className="text-[10px] opacity-50">Build: 2026-03-28 06:27 UTC</p>
-            <button 
-              onClick={() => {
-                console.log("Image Debug Info:");
-                console.log("vrishti:", vrishti);
-                console.log("vrishti2:", vrishti2);
-                console.log("project1:", project1);
-                const imgs = document.querySelectorAll('img');
-                imgs.forEach(img => console.log(`IMG src: ${img.src}, complete: ${img.complete}, naturalWidth: ${img.naturalWidth}`));
-              }}
-              className="text-[10px] underline opacity-30 hover:opacity-100"
-            >
-              Debug Images
-            </button>
           </div>
           <div className="flex gap-8">
             <a className="text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/in/vrishti-sharma-21st042007">LinkedIn</a>
