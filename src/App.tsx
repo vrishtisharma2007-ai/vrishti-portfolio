@@ -41,7 +41,7 @@ export default function App() {
       approach: "Developed a system using OpenCV to process live video feeds, detecting lane boundaries and estimating distance to obstacles.",
       result: "Successfully demonstrated robust lane tracking and proximity alerts in varying lighting environments.",
       tags: ["Python", "OpenCV", "Computer Vision"],
-      image: "/project1.png",
+      image: "/project1.jpeg",
       reverse: false
     },
     {
@@ -53,7 +53,7 @@ export default function App() {
       approach: "Leveraged facial landmark detection and eye-tracking algorithms to monitor Eye Aspect Ratio (EAR) in real-time.",
       result: "The system identifies closed eyes for a sustained period and triggers an immediate audio alert to wake the driver.",
       tags: ["Python", "OpenCV", "Dlib"],
-      image: "/project2.png",
+      image: "/project2.jpeg",
       reverse: true
     },
     {
@@ -139,7 +139,7 @@ export default function App() {
             >
               <div className="relative w-full aspect-square rounded-3xl overflow-hidden glass-card p-4">
                 <img 
-                  src="/vrishti.jpg" 
+                  src="/vrishti.jpeg" 
                   alt="Vrishti Sharma" 
                   className="w-full h-full object-cover rounded-2xl border-2 border-primary/20"
                 />
