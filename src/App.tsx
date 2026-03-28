@@ -65,7 +65,7 @@ export default function App() {
       approach: "Created high-fidelity wireframes focusing on visual hierarchy, accessibility, and streamlined search flows.",
       result: "A modern, user-friendly redesign that prioritizes imagery and ease of conversion.",
       tags: ["Figma", "UI Design", "Prototyping"],
-      image: "/images/project3.jpg",
+      image: "/images/project3.jpeg",
       reverse: false
     }
   ];
@@ -219,7 +219,7 @@ export default function App() {
             >
               <div className="w-full aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src="/images/vrishti2.jpg" 
+                  src="/images/vrishti2.jpeg" 
                   alt="Vrishti Sharma portrait" 
                   className="w-full h-full object-cover border-4 border-white"
                 />
